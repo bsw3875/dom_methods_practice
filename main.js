@@ -4,7 +4,9 @@ body.prepend(mainElement)
 const buttonElement = document.createElement("button")
 buttonElement.append('remove')
 body.prepend(buttonElement)
-buttonElement.addEventListener("click", buttonElement);
+buttonElement.addEventListener("click", function () {
+  mainElement.remove()
+});
 //let buttonElement = document.getElementById("button-element").addEventListener("click", buttonElement);
 //buttonElement = click; addEventListener
 // Attach an event handler to <div>
@@ -12,19 +14,10 @@ buttonElement.addEventListener("click", buttonElement);
 
 
 const imgElement = document.createElement('img')
-imgElement.append('imgElement')
-imgElement.src = "../https://www.positano.com/en/s/positano-3.jsg";
+mainElement.append(imgElement)
+imgElement.src = "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg?resize=750px:*"
 const anchorElement = document.createElement('a')
-anchorElement.append('anchorElement')
+anchorElement.append('google.com')
+mainElement.append(anchorElement)
 anchorElement.href = 'https://google.com';
 
-let input = document.getElementById('image');
-input.addEventListener('image', imgElement);
-
-const inputElementButton = document.createElement("input")
-inputElementButton.prepend('input')
-inputElementButton.addEventListener('click', inputElementButton)
-//function remove(mainElement) {
-  //  return mainElement
-//childNode; remove; mainElement
-//}
